@@ -1,0 +1,120 @@
+#cafe {
+  margin-top: -2px;
+  background-color: #545663;
+  color: #C5C5C5;
+  margin-bottom: 65px;
+  padding-bottom: 60px;
+}
+#cafe_header {
+  background-image: url('../../assets/bg_cafe_wall.jpg');
+  -webkit-background-size:cover;
+  background-size:cover;
+  background-repeat: no-repeat;
+  height: 250px;
+  width: 100%;
+  background-position: 0 76%;
+  position: relative;
+  .txt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    background-color: #738040;
+    padding: 10px 20px;
+    border: 1px solid floralwhite;
+    border-radius: 10px;
+    span {
+      font-size: 1.3em;
+      color: floralwhite;
+      font-weight: 100;
+    }
+  }
+}
+.container-fluid {
+  margin-top: 10px;
+  background-color: #545663;
+  color: #C5C5C5;
+}
+
+.shell {
+  border: 2px solid darkgray;
+  border-radius: 10px;
+}
+.drink__cold {
+  background-image: url('../../assets/coffee_cups.png');
+  -webkit-background-size: 160px;
+  background-size: 160px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+.sandwich {
+  background-color: #738040;
+  td {
+    padding:0.7em 0 0 0;
+    vertical-align:bottom;
+    background-image:radial-gradient(white 1px, #738040 0px);
+    background-size: 8px 8px;
+    background-repeat:repeat-x;
+    background-position: left bottom;
+    small {
+      background-image:radial-gradient(white 1px, #738040 0px);
+    }
+  }
+
+  td span{
+    background-color: #738040;
+  }
+}
+table {
+  width: 90%;
+  margin:10px auto;
+  table-layout:fixed;
+  border-collapse: collapse;
+}
+
+tr.beverage {
+  td {
+    background-image: none;
+    border-bottom: 1px solid darkgray;
+  }
+}
+td {
+  padding:0.4em 0 0 0;
+  vertical-align:bottom;
+  background-image:radial-gradient(white 1px, #545663 0px);
+  background-size: 8px 8px;
+  background-repeat:repeat-x;
+  background-position: left bottom;
+  small {
+    background-image:radial-gradient(white 1px, #545663 0px);
+  }
+}
+
+td span{
+  background-color:#545663;
+}
+
+td:first-child {
+  text-align: left;
+  width: 60%;
+  //font-weight: 700;
+}
+
+td:first-child span{
+  padding-right:.25em;
+}
+
+td:last-child {
+  text-align:right;
+  width:3em;
+}
+
+td:last-child span{
+  padding-left:.25em;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 765px) {
+  #cafe {
+    margin-bottom: 70px;
+  }
+}

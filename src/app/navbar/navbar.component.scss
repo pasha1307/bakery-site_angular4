@@ -1,0 +1,41 @@
+nav {
+  margin-bottom: 0;
+}
+
+a {
+  color:  #88B04B;
+}
+
+.nav-item {
+  //background-color: pink;
+  min-width: 100px;
+  text-align: center;
+
+}
+.nav-item:hover {
+  background-color: rgba(255,234,179,1);
+  .nav-link {
+    color: #434f2f;
+  }
+}
+.nav-item.active {
+  color: red;
+}
+.nav-item.active a.nav-link{
+  color: rgba(255,234,179,1);
+  background-color:  #738040;
+}
+
+/* selected link */
+a:active .nav-link {
+  color:  #738040;
+}
+li.active {
+  color: red;
+}
+.navbar-brand {
+  padding-top: 0px;
+  padding-bottom: 0;
+  margin-top:0px;
+  margin-bottom: 0;
+}

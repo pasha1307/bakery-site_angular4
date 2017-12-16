@@ -1,0 +1,56 @@
+<div id="bake-products">
+  <div id="header">
+    <div class="row">
+      <div class="col-sm-12">
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row justify-content-sm-between">
+      <div class="col-sm-5" id="side-menu">
+        <div class="btn-group" role="group" aria-label="Products">
+          <button type="button" class="btn btn-outline-warning" (click)="onTab('1'); isSelected = false" [class.selected]="isBread">BREADS</button>
+          <button type="button" class="btn btn-outline-warning" (click)="onTab('2'); isSelected = false" [class.selected]="isBagel">BAGELS</button>
+          <button type="button" class="btn btn-outline-warning" (click)="onTab('3'); isSelected = false" [class.selected]="isPastry">PASTRIES</button>
+          <button type="button" class="btn btn-outline-warning" (click)="onTab('4'); isSelected = false" [class.selected]="isVegan">VEGAN</button>
+        </div>
+        <div class="bakery_content">
+          <section *ngIf="type === 1">
+            <p *ngFor="let item of breads, let i = index"
+               (click)="onSelect(item)"
+               [class.chosen]="item === selItem"
+            >{{item.name}}</p>
+          </section>
+          <section *ngIf="type === 2" @detail>
+            <p *ngFor="let item of bagels" (click)="onSelect(item)" [class.chosen]="item === selItem">{{item.name}}</p>
+          </section>
+          <section *ngIf="type === 3" @detail>
+            <p *ngFor="let item of pastries" (click)="onSelect(item)" [class.chosen]="item === selItem">{{item.name}}</p>
+          </section>
+          <section *ngIf="type === 4" @detail>
+            <p *ngFor="let item of vegan" (click)="onSelect(item)" [class.chosen]="item === selItem">{{item.name}}</p>
+          </section>
+        </div>
+      </div>
+      <div class="col-sm-6" id="bakery-right">
+        <div class="not_selected" *ngIf="!isSelected">
+          <div *ngIf="type === 3">
+            <img class="embed-responsive" src="../../assets/products/muffins_right.png" alt="Image Show" alt="Generic placeholder image">
+          </div>
+          <div *ngIf="type === 1">
+            <img class="embed-responsive" src="../../assets/products/breads_right.jpg" alt="Image Show" alt="Generic placeholder image">
+          </div>
+          <div *ngIf="type === 2">
+            <img class="embed-responsive" src="../../assets/products/bagels_right_txt.jpg" alt="Image Show" alt="Generic placeholder image">
+          </div>
+          <div *ngIf="type === 4">
+            <img class="embed-responsive" src="../../assets/products/square_vegan_right.jpg" alt="Image Show" alt="Generic placeholder image">
+          </div>
+        </div>
+        <div *ngIf="isSelected" id="shell-detail">
+          <app-product [item]="selItem" [ngClass]="setAnime()" (onClose)="isSelected = false"></app-product>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

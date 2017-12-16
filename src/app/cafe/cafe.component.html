@@ -1,0 +1,64 @@
+<div class="container-fluid" id="cafe">
+  <div class="row">
+    <div class="col-xs-12" id="cafe_header">
+      <div class="txt">
+        <span>Hot And Cold Drinks and Sandwiches</span>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8">
+        <!--<h2>Beverages</h2>-->
+        <div class="row">
+          <div class="col-md-6 shell">
+            <table>
+              <tr class="beverage">
+                <td><span>HOT DRINKS</span></td>
+                <td><span>Small</span></td>
+                <td><span>Medium</span></td>
+                <td><span>Large</span></td>
+              </tr>
+              <tr *ngFor="let item of hotdrinks">
+                <td><span>{{item.name}}</span></td>
+                <td><span>${{item.size.medium}}</span></td>
+                <td><span>${{item.size.large}}</span></td>
+                <td><span>${{item.size.xlarge}}</span></td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-md-6  shell drink__cold">
+            <table>
+              <tr class="beverage">
+                <td><span>COLD DRINKS</span></td>
+                <td><span>Small</span></td>
+                <td><span>Medium</span></td>
+                <td><span>Large</span></td>
+              </tr>
+              <tr *ngFor="let item of cold_drinks">
+                <td><span>{{item.name}}</span></td>
+                <td><span>${{item.size.medium}}</span></td>
+                <td><span>${{item.size.large}}</span></td>
+                <td><span>${{item.size.xlarge}}</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 offset-lg-1">
+        <!--<h2>Sandwiches</h2>-->
+        <div class="row">
+          <div class="col-xs-12 shell sandwich">
+            <table>
+              <tr *ngFor="let item of sandwiches">
+                <td><span>{{item.name}}</span><br><small>({{item.detail}})</small></td>
+                <td><span>${{item.price}}</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div><!--row total-->
+  </div><!--inner container-fluid-->
+</div> <!--container-fluid-->
